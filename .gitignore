@@ -1,5 +1,6 @@
 ### Local practice notes and instructions ###
 *.md
+!/README.md
 /practice-history/
 
 ### IntelliJ IDEA ###
