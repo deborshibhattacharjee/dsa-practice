@@ -1,5 +1,7 @@
 package interviews.epam;
 
+import java.util.HashSet;
+
 public class LongestSubstringWithoutRepeatingCharacters {
     /*
      * Given a string s, return the length of its longest contiguous substring
@@ -15,6 +17,17 @@ public class LongestSubstringWithoutRepeatingCharacters {
      * "" -> 0
      */
     public static int lengthOfLongestSubstring(String s) {
-        throw new UnsupportedOperationException("Practice implementation pending");
+        int start=0, maxLength=0, i=0;
+        HashSet<Character> set = new HashSet<>();
+
+        while(i<s.length()){
+            while (!set.add(s.charAt(i))){
+                set.remove(s.charAt(start++));
+            }
+            maxLength = Math.max(maxLength, i-start+1);
+            i++;
+        }
+
+        return maxLength;
     }
 }
