@@ -1,5 +1,7 @@
 package interviews.epam;
 
+import java.util.ArrayList;
+
 public class SlidingWindowSum {
     /*
      * Given an integer array nums and an integer k, compute the sum of every
@@ -15,8 +17,9 @@ public class SlidingWindowSum {
      * nums = [2147483647, 1], k = 2 -> [2147483648]
      */
     public static long[] windowSums(int[] nums, int k) {
-        int start =0 , i=0, sum=0, index=0;
-        long ans[] = new long[nums.length];
+        int start =0 , i=0, index=0;
+        Long sum =0L;
+        long ans[] = new long[nums.length-k+1];
         while(i<nums.length){
             sum+=nums[i];
             while(i-start+1>=k){

@@ -1,3 +1,7 @@
+### Local practice notes and instructions ###
+*.md
+/practice-history/
+
 ### IntelliJ IDEA ###
 /.idea/
 /*.iml
